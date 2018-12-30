@@ -1,5 +1,9 @@
 const h1 = document.querySelector("h1")
 document.body.addEventListener("mousemove", (e) => {
-    h1.textContent = `${e.clientX}, ${e.clientY}`
-    document.body.style.backgroundColor = `rgb(${e.clientX}, ${e.clientY}, 100)`
+    const x = e.clientX
+    const y = e.clientY
+    const width = window.innerWidth
+    const height = window.innerHeight
+
+    h1.textContent = `${x}, ${y}`
 })
